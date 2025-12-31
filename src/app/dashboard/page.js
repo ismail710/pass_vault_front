@@ -444,6 +444,11 @@ export default function DashboardPage() {
                             {pwd.url}
                           </a>
                         )}
+                        {pwd.notes && (
+                          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2 italic">
+                            📝 {pwd.notes}
+                          </p>
+                        )}
                       </div>
                       <div className="flex gap-2 sm:flex-col">
                         <button onClick={() => copyToClipboard(pwd.password, "Password")}
